@@ -1,0 +1,703 @@
+body {
+    color: white !important;
+}
+header {
+    background-color: #111111;
+}
+.navbar-brand span {
+    margin-left: -20px;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    padding-left:10px;
+}
+/* Styles for the navbar links */
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.3s ease; /* Smooth transition effect */
+    position: relative; /* For positioning the underline */
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    color: #FF4655 !important; 
+    background-color: #333333;
+    border-radius: 7px;
+}
+
+/* Smooth underline effect */
+ .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start in the center */
+    bottom: -40px; /* Adjusts position below the text */
+    width: 0; /* Initial width */
+    height: 4px; /* Thickness of the underline */
+    background-color: #FF4655; /* Color of the underline */
+    transition: left 0.0s ease, width 0.0s ease; /* Smooth transition for left and width */
+}
+
+/* Expand underline on hover */
+.navbar-nav .nav-link:hover::after {
+    left: 0; /* Move to the left */
+    width: 100%; /* Expand to full width */
+}
+
+
+.nav-link i{
+    color: #6C757D;
+}
+.nav-link:hover i{
+     color: white;
+}
+.navbar-toggler {
+    border-color: white;
+}
+.navbar-toggler-icon {
+    color: white;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.dropdown-item i{
+    color: #6C757D;
+    font-size: x-small;
+}
+
+.navbar .nav-item{
+    font-size:small;
+}
+.navbar .nav-item:hover{
+    color: #FF4655;
+}
+.srch-bar{
+    margin-left:10%;
+   
+}
+.srch-bar .srch{
+    border-radius:11px;
+    cursor: pointer;
+    padding:8px;
+    font-size:x-large;
+    background-color:#2B2A29;
+
+}
+.badge{
+    
+    background: #2B2A29;
+}
+.badge i{
+    color: #6C757D;
+    transition: transform 0.5s ease;
+}
+.badge:hover i{
+     color: white;
+     transform: rotate(180deg);
+} 
+
+        /* Dropdown menu styling */
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block; /* Show the dropdown on hover */
+            opacity: 1; /* Make it visible */
+            transition: opacity 0.3s ease; /* Animation for dropdown */
+        }
+        .navbar-nav .dropdown:active .dropdown-menu {
+            display: block; /* Show the dropdown on hover */
+        }
+        .navbar-nav .dropdown:hover .nav-link {
+            color: #ffeb3b; /* Highlight the parent menu item when hovered */
+        }
+
+        /* Style for the dropdown items */
+        .dropdown-menu {
+            border-radius:0;
+            padding: 10px; /* Adjust padding */
+            margin-top: 0; /* Align with parent */
+            background-color: #333;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+            position: absolute; /* Positioning */
+            width: 100%; /* Full width */
+            z-index: 1; /* Ensure it's above other elements */
+        }
+        .dropdown-item {
+            color:#d0cece;
+            letter-spacing:1px;
+            font-weight:400;
+            font-size: small; 
+            border-radius:5px;
+            text-transform: uppercase;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #444;
+            color: white;
+        }
+
+        /* Adjust the caret position slightly */
+        .nav-link i.fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* Underline effect */
+        .nav-item {
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+.nl::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Start from the left */
+    bottom: -4px; /* Position the underline slightly below the text */
+    height: 4px; /* Thickness of the underline */
+    width: 0; /* Initial width */
+    background-color: #FF4655; /* Color of the underline */
+    transition: width 0.3s ease; /* Animation for hover */
+}
+
+.nav-item:hover .nl::after { /* Apply the effect when the nav-item is hovered */
+    width: 100%; /* Expand to full width on hover */
+}
+.badge .dropdown-menu {
+    background-color: #333; /* Background color for dropdown */
+    padding: 10px; /* Padding for dropdown */
+}
+
+.badge .dropdown-item {
+    color: white; /* Color for dropdown items */
+    font-weight: bold; /* Font weight for dropdown items */
+}
+
+.badge .dropdown-item:hover {
+    background-color: #444; /* Background color on hover for dropdown items */
+    color: white; /* Color on hover for dropdown items */
+}
+
+.video-background {
+    position: absolute; /* Ensure the video stays fixed as the user scrolls */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden; /* Hide anything outside the video area */
+    z-index: -1; /* Position behind other content */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire background without distortion */
+    position: absolute; /* Keep the video in place */
+    top: 0;
+    left: 0;
+}
+
+
+.content {
+    position: relative; /* Ensure this content is above the video */
+    z-index: 1; /* Bring content above the video */
+    color: white; /* Text color for visibility */
+    text-align: center; /* Center align the text */
+    padding: 20px; /* Some padding */
+}
+.butt{
+    background-color: #FF4655;
+    color:white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.butt:hover{
+background-color: white;
+color: #FF4655;
+
+}
+.butt:active{
+    background-color: #FF4655;
+}
+.news {
+    background-size: cover;
+    min-height: 70vh;
+    background-image: url(newsbg.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #111111;
+}
+
+.news a {
+    text-decoration: none;
+    color: #111111;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.news a:hover {
+    color: grey;
+}
+
+.card-no-bg {
+    background-color: transparent;
+    border: none;
+}
+
+.image-cont {
+    min-width: 300px; /* Adjust as needed for the card width */
+    overflow: hidden;
+    position: relative;
+    display: inline-block; /* Ensure cards line up horizontally */
+    margin-right: 20px; /* Add some space between the cards */
+}
+
+.image-cont img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-no-bg img:hover {
+    transform: scale(1.05);
+}
+
+.news-cards-container {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    overflow-x: auto; /* Horizontal scroll when content overflows */
+    padding-bottom: 20px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.news-cards-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.news-cards-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.news-cards-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+.droppdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .droppdown-content {
+    border-top: #FF4655 solid 4px;
+    
+    display: none;
+    position: absolute;
+    background-color:  #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  .droppdown-content a{
+      padding:5px;
+  }
+  
+  .droppdown:hover .droppdown-content {
+    display: block;
+  }
+  
+  /* Profile Section */
+  .drappdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drappdown-content {
+    top: 40px;
+    left: -65px; /* Adjust for the desired distance */
+    border-top: #FF4655 solid 4px;
+    margin-top: 2px;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+    /* Start hidden */
+    opacity: 0;
+    visibility: hidden;
+    
+    /* Add smooth transitions */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    
+    /* Optional: Start slightly above and move down smoothly */
+    transform: translateY(-10px);
+}
+
+.drappdown-content a {
+    padding: 5px;
+}
+
+/* When hovering on the parent, show the dropdown smoothly */
+.drappdown:hover .drappdown-content {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Ensure it's visible */
+    
+    /* Optional: Slide the content down */
+    transform: translateY(0);
+}
+
+.playnow{
+    background-image:url(play.webp);
+    min-height:60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.inform{
+    background-image: url(info.webp);
+    min-height:65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.inform btn{
+    border: none;
+}
+.inform button{
+    background-color: #FF4655;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+.inform button:hover{
+    background-color:#212529;
+    color:white;
+}
+.agents{
+    background-image: url(agentsbg.webp);
+    min-height:70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.agents .btn{
+   border: none;
+   margin-left:-13px;
+}
+.agents button{
+    border: none;
+    background-color: #212529;
+    color: white;
+    transition: all 0.3s ease;
+}
+.agents button:hover{
+    background-color: white;
+    color: #212529;
+}
+.maps{
+    background-image: url(maps.webp);
+    min-height:70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.maps .btn{
+    border: none;
+    margin-left:-13px;
+ }
+ .maps button{
+     border: none;
+     background-color:#FF4655;
+     color: white;
+     transition: all 0.3s ease;
+ }
+ .maps button:hover{
+     background-color:#212529;
+     color:white;
+ }
+ .beforefooter a{
+     transition: all 0.3s ease;
+     font-size: smaller;
+
+ }
+ .beforefooter a:hover{
+    background-color:#444;
+    
+ }
+ footer{
+    height:70vh;
+    background-color: #111111;
+ }
+ footer i{
+    cursor:pointer;
+ }
+footer .navbar-brand{
+    opacity: 60%;
+}
+footer .navbar-brand:hover{
+    opacity: 100%;
+}
+ 
+.inf a{
+    transition: all 0.3s ease;
+    font-size: smaller;
+
+}
+.inf a:hover{
+   background-color:#444;
+   
+}
+@media (max-width:768px){
+    .ms-sm-2 {
+        margin-left: .7rem !important;
+    }
+    .navbar-nav .nav-link::after{
+        bottom:-4px;
+    }
+    .srch-bar i{
+        display: none;
+    }
+    .drappdown .badge{
+      padding:1rem !important;
+     
+      margin-bottom: 1rem !important;
+    }
+    .drappdown .badge i{
+        margin-left:10rem !important;
+    }
+   
+    .inform h1{
+        letter-spacing:normal !important;
+        font-size: 32px !important;
+        line-height: 65px;
+        padding-left: 1.5rem !important;
+      
+        text-wrap: balance;
+    }
+
+    .news h1{
+        font-size:large;
+        padding: right 5rem;
+        margin: 0 !important;
+        margin-top: 1.3rem !important;
+        margin-left:4% !important;
+        
+    }
+    .news a{
+        margin:0 !important;
+        margin-left: auto !important;
+        margin-bottom:0.3rem !important;
+        font-size: medium;
+    }   
+
+    .inform .container-fluid{
+        display: grid !important;
+    }
+    .inform br{
+        display: none !important;
+    }
+    .fixing{
+        order: 2 !important;
+    }
+    .fixing p{
+        margin-left: 0.5rem !important;
+    }
+    .inform .vid{
+        order: 1 !important;
+    }
+    .inform button{
+        padding: 15px 30px 15px 30px !important;
+    }
+    .inform .btn{
+        margin-left:0.7rem !important;
+        margin-bottom:1rem !important;
+    }
+    .inform .p-4{
+        padding:0rem !important;
+    }
+    .inform .video{
+        margin:0 !important;
+        padding: 0 !important;
+    }
+    .inform .vid{
+        margin-left: 0rem !important;
+        margin-top:0rem !important;
+    }
+    .inform video{
+        width: 100% !important;
+    }
+    .agents .container-fluid{
+        display:grid !important; 
+    }
+    .this{
+        margin-left:0rem !important;
+    }
+    .agents h1{
+        letter-spacing:normal !important;
+        font-size: 50px !important;
+        line-height: 65px;
+        text-wrap: balance;
+        margin-top:4% !important;
+    }
+    .agents .arder{
+        order: 1;
+    }
+    .agents .btn{
+        
+        margin-bottom:1rem !important;
+    }
+    .agents button{
+        padding: 15px 30px 15px 30px !important;
+       
+    }
+    .drappdown-content{
+        left: 15px; /* Adjust for the desired distance */
+    }
+    .maps .container-fluid{
+        display: grid !important;
+    }
+    .maps .order-1{
+        order: 2 !important;
+    }
+    .maps h1{
+        margin-top:5% !important;
+    }
+    .maps br{
+        display: none;
+    }
+    .oye{
+        margin-left:0rem !important;
+    }
+    .oye h1{
+        letter-spacing:normal !important;
+        font-size: 50px !important;
+        line-height: 65px;
+        text-wrap: balance;
+        margin-top:4% !important;
+    }
+    footer{
+        height:100%;
+    }
+    footer .badge{
+        margin-bottom:2rem !important;
+    }
+    .beforefooter .container{
+        text-align: center;
+        display: grid !important;
+        padding-left:0rem !important;
+    }
+    footer .ft-brands{
+        display: grid !important;
+        justify-content: center !important;
+        margin-right:35% !important;
+        margin:2rem 0rem;
+    }
+    .frst img{
+        margin-left:4rem !important;
+    }
+    .inf{
+        display: grid !important;
+        text-align: center !important;
+    }
+    .maps .btn{
+        margin-left:-1rem !important;
+    }
+    .maps button{
+        padding: 15px 30px 15px 30px !important;
+    }
+}
+
+@media (max-width:767px){
+    .news h1{
+        font-size: medium;
+        padding: right 5rem;
+        margin: 0 !important;
+        margin-top: 1.3rem !important;
+        margin-left:4% !important;
+        
+    }
+    .news a{
+        margin:0 !important;
+        margin-left: 26% !important;
+        margin-bottom:0.3rem !important;
+        font-size: medium;
+    }
+    
+    
+    .inform .container-fluid{
+        display: grid !important;
+    }
+    .inform br{
+        display: none !important;
+    }
+    .fixing{
+        order: 2 !important;
+    }
+    .fixing p{
+        margin-left: 0.5rem !important;
+    }
+    .inform .vid{
+        order: 1 !important;
+    }
+    .inform button{
+        padding: 20px 80px 20px 80px !important;
+    }
+    .inform .btn{
+        margin-left:2rem !important;
+        margin-bottom:1rem !important;
+    }
+    .inform .p-4{
+        padding:0rem !important;
+    }
+    .inform .video{
+        margin:0 !important;
+        padding: 0 !important;
+    }
+    .inform .vid{
+        margin-left: 0rem !important;
+        margin-top:0rem !important;
+    }
+    .inform video{
+        width: 100% !important;
+    }
+    .agents .container-fluid{
+        display:grid !important; 
+    }
+    .this{
+        margin-left:0rem !important;
+    }
+    .agents h1{
+        letter-spacing:normal !important;
+        font-size: 50px !important;
+        line-height: 65px;
+        text-wrap: balance;
+        margin-top:4% !important;
+    }
+    .agents .arder{
+        order: 1;
+    }
+   
+    .agents button{
+        padding: 20px 90px 20px 90px !important;
+        margin-left:2rem !important;
+    }
+    .drappdown-content{
+        left: 15px; /* Adjust for the desired distance */
+    }
+    .maps .btn{
+        margin-left:2rem !important;
+    }
+    .maps button{
+        padding: 20px 90px 20px 90px !important;
+    }
+}
+@media (max-width:765px) {
+    .tags{
+        display:grid !important;
+    }
+    .tt img{
+      width:200px !important;
+    }
+    .btn{
+        margin-left:0rem !important;
+    }
+}
